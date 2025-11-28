@@ -1,64 +1,68 @@
-// Carrega o JSON
-fetch("items.json")
-  .then(r => r.json())
-  .then(data => {
+async function carregar() {
+  const res = await fetch("items.json");
+  const data = await res.json();
 
-    const areas = data.relatorio_empresarial_2025.areas;
-    const leftTitle = document.getElementById("areaTitulo");
-    const scrollBox = document.getElementById("scroll");
+  const areas = data.relatorio_empresarial_2025.areas;
+  const tituloArea = document.getElementById("tituloArea");
+  const tituloSubarea = document.getElementById("tituloSubarea");
+  const lista = document.getElementById("lista");
 
-    let html = "";
-    const headers = [];  // armazenar todos H2 para detectar área
+  // Criamos uma lista linear de blocos (area + subarea + itens)
+  const blocos = [];
 
-    // Cria conteúdo
-    areas.forEach(area => {
+  areas.forEach(area => {
 
-      // Título principal vira h2 também
-      html += `<h2 data-area="${area.titulo}">${area.titulo}</h2>`;
-      headers.push(area.titulo);
-
-      // Área simples (IMPLANTAÇÃO, SUPORTE…)
-      if (area.itens) {
-        area.itens.forEach(item => {
-          html += `<div class="item">${item.id}. ${item.descricao}</div>`;
-        });
-      }
-
-      // Área com subáreas (DESENVOLVIMENTO…)
-      if (area.subareas) {
-        area.subareas.forEach(sub => {
-          html += `<h2 data-area="${area.titulo}">${sub.subtitulo}</h2>`;
-
-          sub.itens.forEach(item => {
-            html += `<div class="item">${item.id}. ${item.descricao}</div>`;
-          });
-        });
-      }
-
-    });
-
-    // Carrega conteúdo
-    scrollBox.innerHTML = html;
-    scrollBox.innerHTML += html; // duplicação automática
-
-    /* ----------------------------------------------------------
-       🔥 DETECTOR DE ÁREA VISÍVEL NA TELA (dinâmico)
-       ---------------------------------------------------------- */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const area = entry.target.getAttribute("data-area");
-          if (area) {
-            leftTitle.textContent = area; // atualiza H1 automaticamente
-          }
-        }
+    // Área SIMPLES (IMPLANTAÇÃO, SUPORTE, etc.)
+    if (area.itens) {
+      blocos.push({
+        area: area.titulo,
+        sub: "",
+        itens: area.itens
       });
-    }, {
-      root: document.querySelector('.right'),
-      threshold: 0.3
-    });
+    }
 
-    // Observar todos os H2
-    document.querySelectorAll("#scroll h2").forEach(h2 => observer.observe(h2));
+    // Área COMPLEXA com subáreas (DESENVOLVIMENTO)
+    if (area.subareas) {
+      area.subareas.forEach(sub => {
+        blocos.push({
+          area: area.titulo,
+          sub: sub.subtitulo,
+          itens: sub.itens
+        });
+      });
+    }
 
   });
+
+  let index = 0;
+
+  function mostrarBloco() {
+    const bloco = blocos[index];
+
+    // Atualiza textos na coluna da esquerda
+    tituloArea.textContent = bloco.area;
+    tituloSubarea.textContent = bloco.sub || "";
+
+    // Monta itens
+    let html = "";
+    bloco.itens.forEach(i => {
+      html += `<div class="item">${i.id}. ${i.descricao}</div>`;
+    });
+
+    lista.innerHTML = html;
+
+    // Calcula tempo de animação (baseado nos itens)
+    const duration = bloco.itens.length * 2.8; // segundos por item
+    lista.style.animation = `slide ${duration}s linear 1`;
+
+    // Quando terminar a animação, passa para o próximo bloco
+    setTimeout(() => {
+      index = (index + 1) % blocos.length;
+      mostrarBloco();
+    }, duration * 1000);
+  }
+
+  mostrarBloco();
+}
+
+carregar();
