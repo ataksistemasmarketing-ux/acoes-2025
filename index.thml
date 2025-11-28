@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório Empresarial 2025 - Teleprompter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ===============================
+             COLUNA FIXA (ESQUERDA)
+         =============================== -->
+    <div class="left">
+        <div class="date-container">
+            <div class="year">2025</div>
+            <div class="date" id="currentDate">Carregando...</div>
+        </div>
+        <h1>RELATÓRIO EMPRESARIAL</h1>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+    </div>
+
+    <!-- ===============================
+            COLUNA ROLANTE (DIREITA)
+         =============================== -->
+    <div class="right">
+        <div class="scroll" id="scroll">
+            <!-- O conteúdo será carregado via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button id="playPause" class="control-btn">⏸️</button>
+        <button id="speedDown" class="control-btn">➖</button>
+        <span id="speedDisplay" class="speed-display">1x</span>
+        <button id="speedUp" class="control-btn">➕</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
