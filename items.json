@@ -1,0 +1,559 @@
+{
+  "relatorio_empresarial_2025": {
+    "areas": [
+      {
+        "titulo": "IMPLANTAÇÃO",
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "Fevereiro/2025 – Início do processo de estreitamento do relacionamento da Coordenação com a carteira de clientes, por meio de contatos periódicos e prospecção de agendas e horas de implantação. Foram realizados mais de 350 contatos com sucesso."
+          },
+          {
+            "id": 2,
+            "descricao": "Maio/2025 – Recebimento da nova turma de técnicos (\"noobs\") e implantação de um novo modelo de integração, com aproximação direta aos coordenadores e trabalho conjunto na mesma sala, promovendo maior colaboração."
+          },
+          {
+            "id": 3,
+            "descricao": "Gestão à Vista – Implantação de dashboards e indicadores de gestão exibidos em TV e compartilhados com toda a equipe, fortalecendo a transparência e o acompanhamento dos resultados."
+          },
+          {
+            "id": 4,
+            "descricao": "Gestão para a definição e cumprimento de metas com crescimento de 25% no faturamento de horas de implantação, em comparação com 2024."
+          },
+          {
+            "id": 5,
+            "descricao": "Reformulação da Base Padrão – Criação de uma nova estrutura de boas práticas, disponibilizada para apoiar a implantação de novos projetos."
+          },
+          {
+            "id": 6,
+            "descricao": "Novembro/2025 – Início da unificação e reestruturação dos setores Coordenação de Base e Escritório de Projetos, que passaram a se chamar Coordenação de Projetos. Início da Implantação da Gestão de Backoffice, com apontamentos e aferição de indicadores das atividades e faturamento da equipe de implantação fora de agendas, além de planejamento de capacitação junto ao setor de T&D."
+          },
+          {
+            "id": 7,
+            "descricao": "Início Implantação de Gestão de PMO, - que centraliza e padroniza a gestão de projetos, garantindo que todos sigam metodologias, boas práticas e processos definidos, com apontamentos e aferição indicadores para a equipe de Coordenação."
+          },
+          {
+            "id": 8,
+            "descricao": "O que vem pela frente: Janeiro/2026 – Início da implantação do novo modelo para o setor de Parametrização de Projetos, seguindo com a base padrão e boas práticas estabelecidas."
+          }
+        ]
+      },
+      {
+        "titulo": "SUPORTE",
+        "itens": [
+          {
+            "id": 9,
+            "descricao": "Gestão à Vista: Implantação de indicadores operacionais para acompanhamento em tempo real da operação, facilitando decisões rápidas e alinhamento da equipe."
+          },
+          {
+            "id": 10,
+            "descricao": "Qualidade no Atendimento: Criação e implementação de um núcleo dedicado à análise e melhoria contínua da qualidade das interações com o cliente."
+          },
+          {
+            "id": 11,
+            "descricao": "Chamados: Desenvolvimento de relatório automático e padronizado dos chamados em aberto, permitindo visibilidade clara do backlog e prioridades."
+          },
+          {
+            "id": 12,
+            "descricao": "Integração Movidesk x 3CX: Aperfeiçoamento do processo de telefonia integrada, assegurando rastreabilidade das chamadas, distribuição mais equilibrada da demanda e maior velocidade no atendimento ao cliente."
+          },
+          {
+            "id": 13,
+            "descricao": "Roteamento Inteligente de Ligações: Implementação de fluxo automatizado que conecta o cliente ao técnico responsável pelo chamado, agilizando o atendimento e elevando a eficiência operacional."
+          },
+          {
+            "id": 14,
+            "descricao": "Integração Movidesk x Redmine: Implementação da integração para alinhamento entre equipes, garantindo fluxo de trabalho mais organizado entre suporte, desenvolvimento e qualidade."
+          },
+          {
+            "id": 15,
+            "descricao": "Automação de Comunicados para Coordenação e Diretoria: Criação de mecanismo que envia e-mails semanais automáticos com status real dos chamados por coordenador, proporcionando transparência e agilidade na tomada de decisão."
+          }
+        ]
+      },
+      {
+        "titulo": "DESENVOLVIMENTO",
+        "subareas": [
+          {
+            "subtitulo": "Easypac",
+            "itens": [
+              {
+                "id": 16,
+                "descricao": "Portal administrativo foi colocado em produção"
+              },
+              {
+                "id": 17,
+                "descricao": "Easypac admin service, para fazer os processamentos em threads das exportações e relatórios em segundo plano com BackgroundService."
+              },
+              {
+                "id": 18,
+                "descricao": "APP Supervisão que utiliza o motor do easypac admin service para processar as msgs das não conformidades sem sobrecarregar a rota de registros"
+              }
+            ]
+          },
+          {
+            "subtitulo": "IA - Suíno",
+            "itens": [
+              {
+                "id": 19,
+                "descricao": "Implementação de modelos OBB (Oriented Bounding Box) - É um modelo de detecção de objetos que usa caixas delimitadoras rotacionadas, em vez de retangulares alinhadas aos eixos."
+              },
+              {
+                "id": 20,
+                "descricao": "Momentum, para tentar determinar a direção que um animal em movimento vai seguir usando física."
+              },
+              {
+                "id": 21,
+                "descricao": "Box Eater, algoritmo utilizado para evitar problemas quando uma box \"engolia\" a outra, onde duas box virava apenas uma."
+              },
+              {
+                "id": 22,
+                "descricao": "RE-ID - Sistema de reassimilação de IDs, com base no Momentum e no Box Eater, caso haja a perda da detecção, o sistema consegue colocar o mesmo ID anterior para aquele respectivo suíno."
+              },
+              {
+                "id": 23,
+                "descricao": "Captação de Múltiplos Vídeos em Paralelo - Uso de threads para captar vídeos em paralelo, o que consequentemente, reduziu pulos de frames em câmeras IP."
+              },
+              {
+                "id": 24,
+                "descricao": "Multi-Test - Sistema de teste da aplicação com vários vídeos ao mesmo tempo, reduzindo tempo de testes e automatizando o processo."
+              }
+            ]
+          },
+          {
+            "subtitulo": "IA - Bovino",
+            "itens": [
+              {
+                "id": 25,
+                "descricao": "Estabilização de Tracking Carcaça Bovina - Isso faz com que nenhuma carcaça seja perdida ou misturada na análise de cada frame"
+              },
+              {
+                "id": 26,
+                "descricao": "Multi-Tracking - Algoritmo que possibilita a utilização de mais de um tracking de objetos, obtendo uma maior robustez no tracking da carcaça."
+              },
+              {
+                "id": 27,
+                "descricao": "Modelo de Classificação de Direção da Banda - Modelo utilizado para obter a direção que a banda está vindo, obtendo se a banda é \"destro\" ou \"canhota\"."
+              },
+              {
+                "id": 28,
+                "descricao": "Modelo de Classificação - Modelo utilizado para obter a classificação de gordura, membrana e carne da carcaça."
+              }
+            ]
+          },
+          {
+            "subtitulo": "IA - Aves",
+            "itens": [
+              {
+                "id": 29,
+                "descricao": "Implementação de modelos OBB (Oriented Bounding Box) - É um modelo de detecção de objetos que usa caixas delimitadoras rotacionadas, em vez de retangulares alinhadas aos eixos."
+              },
+              {
+                "id": 30,
+                "descricao": "Modelo de Segmentação de Semântica - Modelo utilizado para obter clareiras para desconforto térmico dos frangos, ou seja, áreas em que haviam uma abertura."
+              },
+              {
+                "id": 31,
+                "descricao": "Modelo de Densidade - Modelo utilizado para detectar se os animais estão bebendo água e comendo."
+              },
+              {
+                "id": 32,
+                "descricao": "Modelo de Detecção de Cabeça - Modelo capaz de detectar a posição da cabeça de um frango"
+              },
+              {
+                "id": 33,
+                "descricao": "Parcial do Frango - Algoritmo capaz de mandar a porcentagem que cada frango está dentro da balança com base em sua detecção."
+              }
+            ]
+          },
+          {
+            "subtitulo": "IA - Couro",
+            "itens": [
+              {
+                "id": 34,
+                "descricao": "Algoritmo de Junção de Fatias - Algoritmo capaz de juntar fatias do couro em uma imagem final."
+              },
+              {
+                "id": 35,
+                "descricao": "Algoritmo de Square Packing - Algoritmo capaz de empacotar vários quadrados em um pedaço do couro."
+              }
+            ]
+          },
+          {
+            "subtitulo": "IA - Peixes e Ovos",
+            "itens": [
+              {
+                "id": 36,
+                "descricao": "Modelos de Detecção - Modelos de detecção de peixes e ovos."
+              },
+              {
+                "id": 37,
+                "descricao": "Algoritmo de Count - Algoritmo usado para realizar a contagem de peixes e ovos com base na transição entre áreas de interesse."
+              }
+            ]
+          },
+          {
+            "subtitulo": "Infraestrutura",
+            "itens": [
+              {
+                "id": 38,
+                "descricao": "Docker e Docker-Compose - Aplicações estão conteinerizadas em Docker, garantindo flexibilidade, reprodutibilidade, eliminando problemas com ambientes virtuais e garantindo comunicação interna de serviços diferentes em uma mesma aplicação. Todas as novas aplicações que surgirem seguem a regra de já nascerem usando Docker e docker-compose."
+              },
+              {
+                "id": 39,
+                "descricao": "Grafana e Prometheus - Utilizado ambos para garantir observabilidade das aplicações."
+              },
+              {
+                "id": 40,
+                "descricao": "Chicken Metrics - Nossa aplicação de observabilidade para o projeto de Contagem de Aves com uma interface web interativa, possibilitando verificar contagens durante o dia e de dias anteriores."
+              },
+              {
+                "id": 41,
+                "descricao": "Label-Studio - Aplicação utilizada para versionamento de base de dados de imagens."
+              },
+              {
+                "id": 42,
+                "descricao": "MLFlow - Aplicação utilizada para versionamento de modelos de visão computacional utilizado nos projetos"
+              }
+            ]
+          },
+          {
+            "subtitulo": "Bibliotecas",
+            "itens": [
+              {
+                "id": 43,
+                "descricao": "BIBLIOTECA ATAKLIB: Biblioteca generalizada para ser utilizada nos projetos, evitando repetição de código e centralizando ferramentas úteis para o desenvolvimento"
+              },
+              {
+                "id": 44,
+                "descricao": "BIBLIOTECA ATAKTOOLS: Biblioteca utilizada para versionar as ferramentas que utilizamos para nos auxiliar no desenvolvimento das aplicações"
+              }
+            ]
+          },
+          {
+            "subtitulo": "LLM e IA Interna",
+            "itens": [
+              {
+                "id": 45,
+                "descricao": "Criação de um servidor, interno, de LLM (Large Language Model), que é um modelo de IA treinado com enormes volumes de texto para entender e gerar linguagem humana. Entende perguntas em linguagem natural. Gera textos, códigos, resumos, respostas. Exemplo: ChatGPT, LLaMA, Claude"
+              },
+              {
+                "id": 46,
+                "descricao": "Geração de prototipação profissional em tempo record"
+              },
+              {
+                "id": 47,
+                "descricao": "Geração de aplicação sem linha de código, 100% IA"
+              },
+              {
+                "id": 48,
+                "descricao": "Sugestão de melhoria para códigos novos/legados"
+              },
+              {
+                "id": 49,
+                "descricao": "Novo servidor de Workflow para integração e automatização de processos internos com IAs, APIs e Banco de dados"
+              },
+              {
+                "id": 50,
+                "descricao": "Geração de apresentações, ferramentas e pequenos sites de uso interno"
+              }
+            ]
+          },
+          {
+            "subtitulo": "B2B",
+            "itens": [
+              {
+                "id": 51,
+                "descricao": "Implementação crossdock"
+              },
+              {
+                "id": 52,
+                "descricao": "Canhoto digital"
+              },
+              {
+                "id": 53,
+                "descricao": "Bipagem de novas notas (sem vínculos)"
+              }
+            ]
+          },
+          {
+            "subtitulo": "ERP",
+            "itens": [
+              {
+                "id": 54,
+                "descricao": "Criação de novo backend com .NET 8"
+              },
+              {
+                "id": 55,
+                "descricao": "Novo frontend em .NET + Bootstrap"
+              },
+              {
+                "id": 56,
+                "descricao": "Serviço de BackgroundServices para processamentos em segundo plano (faturamento de notas)"
+              },
+              {
+                "id": 57,
+                "descricao": "Integração com apis bancárias"
+              },
+              {
+                "id": 58,
+                "descricao": "Virada da reforma tributária com configurador automático"
+              },
+              {
+                "id": 59,
+                "descricao": "Testes de interface na liberação de versões do erp"
+              },
+              {
+                "id": 60,
+                "descricao": "Reforma tributária"
+              }
+            ]
+          },
+          {
+            "subtitulo": "Frigo",
+            "itens": [
+              {
+                "id": 61,
+                "descricao": "Refatoração dos serviços para compatibilidade com Windows Service padrão e inicialização dos componentes .net o que tinha limitação antes."
+              },
+              {
+                "id": 62,
+                "descricao": "Painel de acompanhamento de abate"
+              },
+              {
+                "id": 63,
+                "descricao": "Assistente de balança"
+              }
+            ]
+          },
+          {
+            "subtitulo": "Mobile",
+            "itens": [
+              {
+                "id": 64,
+                "descricao": "Arquitetura com Bloc e clean architecture"
+              },
+              {
+                "id": 65,
+                "descricao": "Componentização para reaproveitamento em diferentes sistemas mobiles. Ex. uma tela de login é comum e não temos que duplicar isso para cada projeto."
+              }
+            ]
+          },
+          {
+            "subtitulo": "Skyone",
+            "itens": [
+              {
+                "id": 66,
+                "descricao": "Fornecimento dos sistemas em cloud. ERP e Chão de Fábrica."
+              },
+              {
+                "id": 67,
+                "descricao": "Ambiente LLM, personalizado por cliente, para customização de base de conhecimento em cima do banco de dados do ERP, para uso no Força de Vendas"
+              }
+            ]
+          },
+          {
+            "subtitulo": "Geral",
+            "itens": [
+              {
+                "id": 68,
+                "descricao": "Início do CMMI para finalizar no próximo ano"
+              },
+              {
+                "id": 69,
+                "descricao": "Reorganização das equipes com times específicos"
+              },
+              {
+                "id": 70,
+                "descricao": "Controle dos KPI's do desenvolvimento"
+              },
+              {
+                "id": 71,
+                "descricao": "Aviso automático da situação das tarefas por responsável"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "COMERCIAL",
+        "itens": [
+          {
+            "id": 72,
+            "descricao": "Estruturação Comercial: Entre abril e dezembro de 2025 realizamos a reestruturação do Comercial, buscando o foco na venda. Migramos do sistema Néctar para a Exact e reformulamos o processo de gestão de Leads e Clientes."
+          },
+          {
+            "id": 73,
+            "descricao": "Processos: Criamos procedimentos padrões para os consultores e pré vendedores."
+          },
+          {
+            "id": 74,
+            "descricao": "Inteligência Artificial: Incluímos nas dinâmicas diárias o uso da IA como apoio para o time, em práticas de estruturação de conversas e históricos."
+          },
+          {
+            "id": 75,
+            "descricao": "Time Comercial: Com a inclusão de novos colaboradores com perfil técnico, observamos a evolução do time e melhoria nas tratativas comerciais de propostas em andamento."
+          },
+          {
+            "id": 76,
+            "descricao": "Novos Produtos: Implementamos a divisão estratégica da carteira e fortalecemos o relacionamento com clientes, explorando maior potencial de crescimento e atuando na venda de produtos novos (Comprovante Digital, Delivery B2B e agora, Atak Cloud)."
+          },
+          {
+            "id": 77,
+            "descricao": "Feiras e Eventos: Mantivemos nossa presença em feiras e ações de fechamento de vendas."
+          }
+        ]
+      },
+      {
+        "titulo": "RECURSOS HUMANOS",
+        "itens": [
+          {
+            "id": 78,
+            "descricao": "Automação do processo de férias no sistema;"
+          },
+          {
+            "id": 79,
+            "descricao": "Auditoria interna concluída em benefícios e folha de pagamento;"
+          },
+          {
+            "id": 80,
+            "descricao": "Posse e execução total da CIPA 2025;"
+          },
+          {
+            "id": 81,
+            "descricao": "Cumprimento das cotas legais de PCD e Aprendizes;"
+          },
+          {
+            "id": 82,
+            "descricao": "Fechamento mensal da folha de pagamento, ponto e gestão de benefícios;"
+          },
+          {
+            "id": 83,
+            "descricao": "Execução contínua das rotinas de Medicina e Segurança do Trabalho;"
+          },
+          {
+            "id": 84,
+            "descricao": "Atuação integrada com o jurídico em tratativas trabalhistas e preventivas;"
+          },
+          {
+            "id": 85,
+            "descricao": "Manutenção e atualização dos indicadores da diretoria, entregues mensalmente;"
+          },
+          {
+            "id": 86,
+            "descricao": "Fechamento de banco de horas semestral;"
+          },
+          {
+            "id": 87,
+            "descricao": "Entrega mensal aos líderes do banco de horas e ocorrências de ponto;"
+          },
+          {
+            "id": 88,
+            "descricao": "170 colaboradores avaliados no ciclo anual de desempenho;"
+          },
+          {
+            "id": 89,
+            "descricao": "Entrega aos 34 líderes sua avaliação feita pelos liderados;"
+          },
+          {
+            "id": 90,
+            "descricao": "Mais de 450 feedbacks realizados entre avaliação anual e experiência;"
+          },
+          {
+            "id": 91,
+            "descricao": "Reestruturação completa do processo de Recrutamento e Seleção;"
+          },
+          {
+            "id": 92,
+            "descricao": "Desenvolvimento do Treinamento para Novos Líderes;"
+          },
+          {
+            "id": 93,
+            "descricao": "53 treinamentos presenciais realizados, totalizando 5.270 horas de capacitação;"
+          },
+          {
+            "id": 94,
+            "descricao": "Estruturação dos feedbacks de 45 e 90 dias via sistema RHGestor;"
+          },
+          {
+            "id": 95,
+            "descricao": "Aplicação de testes DISC e Palográfico nos processos seletivos;"
+          },
+          {
+            "id": 96,
+            "descricao": "Adequações implementadas conforme a NR1;"
+          },
+          {
+            "id": 97,
+            "descricao": "Condução da Turma NoobTech com 100% das entregas concluídas no primeiro semestre;"
+          },
+          {
+            "id": 98,
+            "descricao": "Implementação do Projeto Multiplicadores – 5 Minutos de Pausa;"
+          },
+          {
+            "id": 99,
+            "descricao": "Manutenção de ações de bem-estar: Dia da Fruta; Vacinação da Gripe; Dia da Família; Dia das mulheres; Atakianos Day; Dia das mães; Entregas do Baby Atak;"
+          },
+          {
+            "id": 100,
+            "descricao": "Líderes capacitados para aplicação da avaliação de desempenho e leitura de perfis comportamentais DISC;"
+          },
+          {
+            "id": 101,
+            "descricao": "Processo de admissão reestruturado, com apresentação do descritivo de função atualizado juntamente aos gestores."
+          }
+        ]
+      },
+      {
+        "titulo": "MARKETING",
+        "itens": [
+          {
+            "id": 102,
+            "descricao": "Canal de Parcerias Easypac: Expansão comercial com 16 novos parceiros e 2 novos clientes, fortalecendo presença nacional e ampliando o volume de negociações estratégicas."
+          },
+          {
+            "id": 103,
+            "descricao": "Inbound Marketing como Motor de Vendas: Responsável por 60% das novas vendas, consolidando o marketing como principal gerador de demanda comercial."
+          },
+          {
+            "id": 104,
+            "descricao": "Participação Estratégica na SeaFood 2025: Planejamento de presença, estrutura e materiais. O evento gerou novos negócios e parcerias, ampliando o valor institucional da Atak."
+          },
+          {
+            "id": 105,
+            "descricao": "Otimização do Processo de Pré-vendas: Reformulação dos processos de qualificação e acompanhamento das prospecções, aumentando agendamentos e oportunidades comerciais."
+          },
+          {
+            "id": 106,
+            "descricao": "Ações de Relacionamento e Visibilidade com Clientes: Fortalecimento da percepção de valor da marca através de visitas estratégicas de clientes na sede e benchmarking. Destaque para o case Longá com a Astra, que gerou alta visibilidade e retorno positivo do proprietário, reconhecendo nossa postura e profissionalismo."
+          },
+          {
+            "id": 107,
+            "descricao": "Unificação da Performance em Anúncios Pagos e Conteúdo Orgânico: Criação de um ponto único de mensuração de conversões, trazendo mais transparência e visão real do retorno sobre investimento. Incluo ainda, a criação do dashboard de acompanhamento em tempo real."
+          },
+          {
+            "id": 108,
+            "descricao": "Nova Estrutura do Site Atak: Para o Google/Chat GPT não basta ser bom, tem que parecer bom. Realizamos a reformulação completa focada em estrutura de conteúdos para gerar mais resultados em buscas aumentando visibilidade e captação de leads qualificados."
+          },
+          {
+            "id": 109,
+            "descricao": "Lançamento da Inteligência Atak (Portal de IA): Centralização do conhecimento corporativo e apoio na geração de novos leads por meio de conteúdos estratégicos (Documentação e Avisos) integrados à IA - IAGO."
+          },
+          {
+            "id": 110,
+            "descricao": "Evolução do Agente de IA – Iago: Integração em tempo real com os conteúdos da plataforma IA Atak e especialização em qualificação comercial."
+          },
+          {
+            "id": 111,
+            "descricao": "Campanha de Valores Atak: Fortalecimento da cultura interna reforçando o alinhamento entre áreas e colaboradores."
+          },
+          {
+            "id": 112,
+            "descricao": "Comitê de Endomarketing: Estrutura colaborativa para engajamento e corresponsabilidade nas ações internas, ampliando participação e impacto nas ações."
+          }
+        ]
+      }
+    ]
+  }
+}
