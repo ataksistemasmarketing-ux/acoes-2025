@@ -2,32 +2,33 @@
 fetch("items.json")
   .then(r => r.json())
   .then(data => {
+
     const areas = data.relatorio_empresarial_2025.areas;
     const leftTitle = document.getElementById("areaTitulo");
     const scrollBox = document.getElementById("scroll");
 
     let html = "";
-    let lastArea = "";
+    const headers = [];  // armazenar todos H2 para detectar área
 
-    // Monta o conteúdo da coluna direita
+    // Cria conteúdo
     areas.forEach(area => {
 
-      // ATUALIZA O H1 FIXO (esquerda)
-      lastArea = area.titulo;
+      // Título principal vira h2 também
+      html += `<h2 data-area="${area.titulo}">${area.titulo}</h2>`;
+      headers.push(area.titulo);
 
-      html += `<h2>${area.titulo}</h2>`;
-
-      // Se é uma área simples: (IMPLANTAÇÃO, SUPORTE, COMERCIAL, RH, MARKETING)
+      // Área simples (IMPLANTAÇÃO, SUPORTE…)
       if (area.itens) {
         area.itens.forEach(item => {
           html += `<div class="item">${item.id}. ${item.descricao}</div>`;
         });
       }
 
-      // Se tem subáreas (DESENVOLVIMENTO)
+      // Área com subáreas (DESENVOLVIMENTO…)
       if (area.subareas) {
         area.subareas.forEach(sub => {
-          html += `<h2>${sub.subtitulo}</h2>`;
+          html += `<h2 data-area="${area.titulo}">${sub.subtitulo}</h2>`;
+
           sub.itens.forEach(item => {
             html += `<div class="item">${item.id}. ${item.descricao}</div>`;
           });
@@ -36,12 +37,28 @@ fetch("items.json")
 
     });
 
-    // Exibe o H1 da última área — mas você pode alterar a lógica
-    leftTitle.textContent = lastArea;
-
-    // Coloca tudo na coluna direita
+    // Carrega conteúdo
     scrollBox.innerHTML = html;
+    scrollBox.innerHTML += html; // duplicação automática
 
-    // DUPLICA AUTOMATICAMENTE para loop infinito
-    scrollBox.innerHTML += html;
+    /* ----------------------------------------------------------
+       🔥 DETECTOR DE ÁREA VISÍVEL NA TELA (dinâmico)
+       ---------------------------------------------------------- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const area = entry.target.getAttribute("data-area");
+          if (area) {
+            leftTitle.textContent = area; // atualiza H1 automaticamente
+          }
+        }
+      });
+    }, {
+      root: document.querySelector('.right'),
+      threshold: 0.3
+    });
+
+    // Observar todos os H2
+    document.querySelectorAll("#scroll h2").forEach(h2 => observer.observe(h2));
+
   });
